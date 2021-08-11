@@ -1,0 +1,15 @@
+﻿@{
+  if(ViewBag.Count == null){
+    ViewBag.Count = 0;
+  }
+}
+
+<form id="form1" asp-action="CountUp" runat="server">
+  <div class="form-group">
+    
+    <h1>Random passcode (passcode #@ViewBag.Count)</h1>
+    <input type="text" name="randomCode" id="RandomCode" value=@ViewBag.RandomPasscode />
+    <input class="btn btn-success" type="submit" value="Generate">
+  </div>
+
+</form>
